@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "thermaladdons:block/world_heater_block"
+    }
+  }
+}

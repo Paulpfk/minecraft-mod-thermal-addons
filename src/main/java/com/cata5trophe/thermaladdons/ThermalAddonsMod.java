@@ -1,6 +1,6 @@
 package com.cata5trophe.thermaladdons;
 
-import com.cata5trophe.thermaladdons.item.ModItems;
+import com.cata5trophe.thermaladdons.registration.Registration;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -24,7 +24,7 @@ public class ThermalAddonsMod {
     public ThermalAddonsMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(modEventBus);
+        Registration.registerAll(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
