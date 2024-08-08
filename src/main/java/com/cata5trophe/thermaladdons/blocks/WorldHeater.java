@@ -14,6 +14,7 @@ public class WorldHeater extends Block {
                         .strength(10f)
                         .lightLevel((p_60954_) -> 15)
                         .sound(SoundType.METAL)
+                        .requiresCorrectToolForDrops()
         );
     }
 }
