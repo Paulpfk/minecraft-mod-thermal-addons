@@ -27,10 +27,13 @@ public class SnowDestroyerBlockEntity extends BlockEntity {
             BlockPos negativeRadiusPosition = blockPos.offset(-1 * radius, -1 * radius, -1 * radius);
 
             Iterable<BlockPos> cubeResult = BlockPos.betweenClosed(positiveRadiusPosition, negativeRadiusPosition);
+            MutableComponent snowName = Blocks.SNOW.getName();
+            MutableComponent snowBlockName = Blocks.SNOW_BLOCK.getName();
+            MutableComponent powderSnowName = Blocks.POWDER_SNOW.getName();
 
             for (BlockPos pos : cubeResult) {
                 MutableComponent blockForCheckName = level.getBlockState(pos).getBlock().getName();
-                if (blockForCheckName.equals(Blocks.SNOW.getName()) || blockForCheckName.equals(Blocks.SNOW_BLOCK.getName()) || blockForCheckName.equals(Blocks.POWDER_SNOW.getName())) {
+                if (blockForCheckName.equals(snowName) || blockForCheckName.equals(snowBlockName) || blockForCheckName.equals(powderSnowName)) {
                     level.destroyBlock(pos, false);
                 }
             }
