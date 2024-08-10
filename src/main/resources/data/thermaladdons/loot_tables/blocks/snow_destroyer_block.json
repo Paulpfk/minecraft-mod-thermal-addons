@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "thermaladdons:world_heater_block"
+          "name": "thermaladdons:snow_destroyer_block"
         }
       ]
     }

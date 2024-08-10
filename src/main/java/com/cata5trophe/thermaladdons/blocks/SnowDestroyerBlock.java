@@ -18,16 +18,16 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class WorldHeaterBlock extends Block {
+public class SnowDestroyerBlock extends Block {
 
-    public static final String NAME = "world_heater_block";
+    public static final String NAME = "snow_destroyer_block";
 
     public static final BooleanProperty ENABLED = BooleanProperty.create("enabled");
 
-    public WorldHeaterBlock() {
+    public SnowDestroyerBlock() {
         super(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                 .strength(6f)
-                .lightLevel(state -> state.getValue(WorldHeaterBlock.ENABLED) ? 15 : 0)
+                .lightLevel(state -> state.getValue(SnowDestroyerBlock.ENABLED) ? 15 : 0)
                 .sound(SoundType.METAL)
                 .requiresCorrectToolForDrops()
         );
@@ -40,7 +40,7 @@ public class WorldHeaterBlock extends Block {
 
             if (!blockState.getValue(ENABLED)) {
                 level.setBlock(blockPos, blockState.setValue(ENABLED, true), 3);
-                player.sendSystemMessage(Component.literal("World Heater turned on."));
+                player.sendSystemMessage(Component.literal("Snow Destroyer turned on."));
 
                 int radius = 20;
 
@@ -58,7 +58,7 @@ public class WorldHeaterBlock extends Block {
 
             } else {
                 level.setBlock(blockPos, blockState.setValue(ENABLED, false), 3);
-                player.sendSystemMessage(Component.literal("World Heater turned off."));
+                player.sendSystemMessage(Component.literal("Snow Destroyer turned off."));
             }
         }
 

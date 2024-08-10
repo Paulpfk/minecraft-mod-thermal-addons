@@ -1,7 +1,7 @@
 package com.cata5trophe.thermaladdons.registration;
 
 import com.cata5trophe.thermaladdons.ThermalAddonsMod;
-import com.cata5trophe.thermaladdons.blocks.WorldHeaterBlock;
+import com.cata5trophe.thermaladdons.blocks.SnowDestroyerBlock;
 import com.cata5trophe.thermaladdons.tab.ModCreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,7 +29,7 @@ public class ModBlockRegistration {
         return ModItemRegistration.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 
-    public static final RegistryObject<Block> WORLD_HEATER_BLOCK = ModBlockRegistration.registerBlock(WorldHeaterBlock.NAME,
-            WorldHeaterBlock::new,
+    public static final RegistryObject<Block> SNOW_DESTROYER_BLOCK = ModBlockRegistration.registerBlock(SnowDestroyerBlock.NAME,
+            SnowDestroyerBlock::new,
             ModCreativeModeTab.THERMAL_ADDONS_TAB);
 }

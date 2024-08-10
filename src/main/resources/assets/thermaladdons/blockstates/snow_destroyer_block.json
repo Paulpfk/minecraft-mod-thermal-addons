@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "thermaladdons:block/world_heater_block"
+      "model": "thermaladdons:block/snow_destroyer_block"
     }
   }
 }
