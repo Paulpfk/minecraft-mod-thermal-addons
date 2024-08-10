@@ -14,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 
-public class ModBlockRegistration {
+public class BlockRegistration {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ThermalAddonsMod.MOD_ID);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
@@ -26,10 +26,10 @@ public class ModBlockRegistration {
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, Supplier<T> block, CreativeModeTab tab) {
 
-        return ModItemRegistration.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+        return ItemRegistration.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
     }
 
-    public static final RegistryObject<Block> SNOW_DESTROYER_BLOCK = ModBlockRegistration.registerBlock(SnowDestroyerBlock.NAME,
+    public static final RegistryObject<Block> SNOW_DESTROYER_BLOCK = BlockRegistration.registerBlock(SnowDestroyerBlock.NAME,
             SnowDestroyerBlock::new,
             ModCreativeModeTab.THERMAL_ADDONS_TAB);
 }

@@ -8,9 +8,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItemRegistration {
+public class ItemRegistration {
     public static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ThermalAddonsMod.MOD_ID);
-
 
     public static final RegistryObject<Item> WORLD_HEATER = ITEMS.register(WorldHeaterItem.NAME, () -> new WorldHeaterItem(ModCreativeModeTab.THERMAL_ADDONS_TAB));
 }
