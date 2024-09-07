@@ -19,7 +19,7 @@ Blazerod = B </br>
 Lava Bucket = L </br>
 Diamond Block = D </br>
 
-| | |
+| | | |
 | -------- | ------- | ------- |
 | G | B | G |
 | G | L | G |
