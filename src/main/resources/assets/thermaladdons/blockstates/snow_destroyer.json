@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "enabled=false": {
+      "model": "thermaladdons:block/snow_destroyer"
+    },
+    "enabled=true": {
+      "model": "thermaladdons:block/snow_destroyer_on"
+    }
+  }
+}

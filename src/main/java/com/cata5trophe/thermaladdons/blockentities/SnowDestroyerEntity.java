@@ -8,17 +8,17 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-import static com.cata5trophe.thermaladdons.blocks.SnowDestroyerBlock.ENABLED;
+import static com.cata5trophe.thermaladdons.blocks.SnowDestroyer.ENABLED;
 
-public class SnowDestroyerBlockEntity extends BlockEntity {
+public class SnowDestroyerEntity extends BlockEntity {
 
-    public static final String NAME = "snow_destroyer_block_entity";
+    public static final String NAME = "snow_destroyer_entity";
 
-    public SnowDestroyerBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(BlockEntityRegistration.SNOW_DESTROYER_BLOCK_ENTITY.get(), blockPos, blockState);
+    public SnowDestroyerEntity(BlockPos blockPos, BlockState blockState) {
+        super(BlockEntityRegistration.SNOW_DESTROYER_ENTITY.get(), blockPos, blockState);
     }
 
-    public static void tick(Level level, BlockPos blockPos, BlockState blockState, SnowDestroyerBlockEntity snowDestroyerBlockEntity) {
+    public static void tick(Level level, BlockPos blockPos, BlockState blockState, SnowDestroyerEntity snowDestroyerEntity) {
 
         if (blockState.getValue(ENABLED) && !level.isClientSide()) {
             int radius = 20;

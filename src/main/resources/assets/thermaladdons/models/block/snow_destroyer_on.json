@@ -1,0 +1,9 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "front": "thermaladdons:block/snow_destroyer_front_on",
+    "side": "thermaladdons:block/snow_destroyer_front_on",
+    "top": "thermaladdons:block/snow_destroyer_top",
+    "bottom": "thermaladdons:block/snow_destroyer_bottom"
+  }
+}

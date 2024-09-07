@@ -9,7 +9,7 @@ public class ThermalAddonsCreativeModeTab {
     public static final CreativeModeTab THERMAL_ADDONS_TAB = new CreativeModeTab("thermaladdonstab") {
         @Override
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(BlockRegistration.SNOW_DESTROYER_BLOCK.get());
+            return new ItemStack(BlockRegistration.SNOW_DESTROYER.get());
         }
     };
 }
