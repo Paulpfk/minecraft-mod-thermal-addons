@@ -2,8 +2,8 @@ package com.cata5trophe.thermaladdons.blockentities;
 
 import com.cata5trophe.thermaladdons.registration.BlockEntityRegistration;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,13 +27,13 @@ public class SnowDestroyerBlockEntity extends BlockEntity {
             BlockPos negativeRadiusPosition = blockPos.offset(-1 * radius, -1 * radius, -1 * radius);
 
             Iterable<BlockPos> cubeResult = BlockPos.betweenClosed(positiveRadiusPosition, negativeRadiusPosition);
-            MutableComponent snowName = Blocks.SNOW.getName();
-            MutableComponent snowBlockName = Blocks.SNOW_BLOCK.getName();
-            MutableComponent powderSnowName = Blocks.POWDER_SNOW.getName();
+            Block snowLayer = Blocks.SNOW;
+            Block snowBlock = Blocks.SNOW_BLOCK;
+            Block powderSnow = Blocks.POWDER_SNOW;
 
             for (BlockPos pos : cubeResult) {
-                MutableComponent blockForCheckName = level.getBlockState(pos).getBlock().getName();
-                if (blockForCheckName.equals(snowName) || blockForCheckName.equals(snowBlockName) || blockForCheckName.equals(powderSnowName)) {
+                Block blockForCheckName = level.getBlockState(pos).getBlock();
+                if (blockForCheckName.equals(snowLayer) || blockForCheckName.equals(snowBlock) || blockForCheckName.equals(powderSnow)) {
                     level.destroyBlock(pos, false);
                 }
             }
